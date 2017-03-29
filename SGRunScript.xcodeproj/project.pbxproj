@@ -7,6 +7,18 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		670E11541E8B88C6006D8F39 /* Strings.strings in Resources */ = {isa = PBXBuildFile; fileRef = 670E11531E8B88C6006D8F39 /* Strings.strings */; };
+		670E117D1E8BA401006D8F39 /* RNCryptor.m in Sources */ = {isa = PBXBuildFile; fileRef = 670E11761E8BA401006D8F39 /* RNCryptor.m */; };
+		670E117E1E8BA401006D8F39 /* RNCryptorEngine.m in Sources */ = {isa = PBXBuildFile; fileRef = 670E11781E8BA401006D8F39 /* RNCryptorEngine.m */; };
+		670E117F1E8BA401006D8F39 /* RNDecryptor.m in Sources */ = {isa = PBXBuildFile; fileRef = 670E117A1E8BA401006D8F39 /* RNDecryptor.m */; };
+		670E11801E8BA401006D8F39 /* RNEncryptor.m in Sources */ = {isa = PBXBuildFile; fileRef = 670E117C1E8BA401006D8F39 /* RNEncryptor.m */; };
+		670E11821E8BA427006D8F39 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 670E11811E8BA427006D8F39 /* Security.framework */; };
+		670E11841E8BA42D006D8F39 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 670E11831E8BA42D006D8F39 /* Security.framework */; };
+		670E11891E8BA480006D8F39 /* RNEncryptor.m in Sources */ = {isa = PBXBuildFile; fileRef = 670E117C1E8BA401006D8F39 /* RNEncryptor.m */; };
+		670E118A1E8BA482006D8F39 /* RNDecryptor.m in Sources */ = {isa = PBXBuildFile; fileRef = 670E117A1E8BA401006D8F39 /* RNDecryptor.m */; };
+		670E118B1E8BA484006D8F39 /* RNCryptorEngine.m in Sources */ = {isa = PBXBuildFile; fileRef = 670E11781E8BA401006D8F39 /* RNCryptorEngine.m */; };
+		670E118C1E8BA486006D8F39 /* RNCryptor.m in Sources */ = {isa = PBXBuildFile; fileRef = 670E11761E8BA401006D8F39 /* RNCryptor.m */; };
+		670E118E1E8BA6F6006D8F39 /* PropertyList.plist in Resources */ = {isa = PBXBuildFile; fileRef = 670E118D1E8BA6F6006D8F39 /* PropertyList.plist */; };
 		674337EF1E8A5BFA00490EE9 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 674337EE1E8A5BFA00490EE9 /* main.m */; };
 		674337F21E8A5BFA00490EE9 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 674337F11E8A5BFA00490EE9 /* AppDelegate.m */; };
 		674337F51E8A5BFA00490EE9 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 674337F41E8A5BFA00490EE9 /* ViewController.m */; };
@@ -14,6 +26,7 @@
 		674337FA1E8A5BFB00490EE9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 674337F91E8A5BFB00490EE9 /* Assets.xcassets */; };
 		674337FD1E8A5BFB00490EE9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 674337FB1E8A5BFB00490EE9 /* LaunchScreen.storyboard */; };
 		6743380B1E8A5C1E00490EE9 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6743380A1E8A5C1E00490EE9 /* main.swift */; };
+		B66E4E788005280CF9631D77 /* libPods-SGRunScript.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 745C54FCDB673C8AFCAE4BC7 /* libPods-SGRunScript.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -29,6 +42,23 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		1DEFECB06AD9ABDACE135CCF /* Pods-SGRunScript.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SGRunScript.release.xcconfig"; path = "Pods/Target Support Files/Pods-SGRunScript/Pods-SGRunScript.release.xcconfig"; sourceTree = "<group>"; };
+		5A88168D7B4ACEC7C3207C6D /* Pods_SGBuildHelper.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SGBuildHelper.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		670E11531E8B88C6006D8F39 /* Strings.strings */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; path = Strings.strings; sourceTree = "<group>"; };
+		670E11731E8BA401006D8F39 /* RNCryptor+Private.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "RNCryptor+Private.h"; sourceTree = "<group>"; };
+		670E11741E8BA401006D8F39 /* RNCryptor-Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "RNCryptor-Prefix.pch"; sourceTree = "<group>"; };
+		670E11751E8BA401006D8F39 /* RNCryptor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RNCryptor.h; sourceTree = "<group>"; };
+		670E11761E8BA401006D8F39 /* RNCryptor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RNCryptor.m; sourceTree = "<group>"; };
+		670E11771E8BA401006D8F39 /* RNCryptorEngine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RNCryptorEngine.h; sourceTree = "<group>"; };
+		670E11781E8BA401006D8F39 /* RNCryptorEngine.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RNCryptorEngine.m; sourceTree = "<group>"; };
+		670E11791E8BA401006D8F39 /* RNDecryptor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RNDecryptor.h; sourceTree = "<group>"; };
+		670E117A1E8BA401006D8F39 /* RNDecryptor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RNDecryptor.m; sourceTree = "<group>"; };
+		670E117B1E8BA401006D8F39 /* RNEncryptor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RNEncryptor.h; sourceTree = "<group>"; };
+		670E117C1E8BA401006D8F39 /* RNEncryptor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RNEncryptor.m; sourceTree = "<group>"; };
+		670E11811E8BA427006D8F39 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.12.sdk/System/Library/Frameworks/Security.framework; sourceTree = DEVELOPER_DIR; };
+		670E11831E8BA42D006D8F39 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
+		670E11851E8BA453006D8F39 /* SGBuildHelper-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "SGBuildHelper-Bridging-Header.h"; sourceTree = "<group>"; };
+		670E118D1E8BA6F6006D8F39 /* PropertyList.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = PropertyList.plist; sourceTree = "<group>"; };
 		674337EA1E8A5BFA00490EE9 /* SGRunScript.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SGRunScript.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		674337EE1E8A5BFA00490EE9 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		674337F01E8A5BFA00490EE9 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -41,6 +71,8 @@
 		674337FE1E8A5BFB00490EE9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		674338081E8A5C1E00490EE9 /* SGBuildHelper */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = SGBuildHelper; sourceTree = BUILT_PRODUCTS_DIR; };
 		6743380A1E8A5C1E00490EE9 /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
+		745C54FCDB673C8AFCAE4BC7 /* libPods-SGRunScript.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-SGRunScript.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		AD8EF78B60C12202093118A6 /* Pods-SGRunScript.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SGRunScript.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SGRunScript/Pods-SGRunScript.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -48,6 +80,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				670E11841E8BA42D006D8F39 /* Security.framework in Frameworks */,
+				B66E4E788005280CF9631D77 /* libPods-SGRunScript.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -55,18 +89,55 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				670E11821E8BA427006D8F39 /* Security.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		670E11501E8B853C006D8F39 /* HERE */ = {
+			isa = PBXGroup;
+			children = (
+				670E11531E8B88C6006D8F39 /* Strings.strings */,
+				670E118D1E8BA6F6006D8F39 /* PropertyList.plist */,
+			);
+			path = HERE;
+			sourceTree = "<group>";
+		};
+		670E11711E8BA3EC006D8F39 /* Library */ = {
+			isa = PBXGroup;
+			children = (
+				670E11721E8BA401006D8F39 /* RNCryptor */,
+			);
+			path = Library;
+			sourceTree = "<group>";
+		};
+		670E11721E8BA401006D8F39 /* RNCryptor */ = {
+			isa = PBXGroup;
+			children = (
+				670E11731E8BA401006D8F39 /* RNCryptor+Private.h */,
+				670E11741E8BA401006D8F39 /* RNCryptor-Prefix.pch */,
+				670E11751E8BA401006D8F39 /* RNCryptor.h */,
+				670E11761E8BA401006D8F39 /* RNCryptor.m */,
+				670E11771E8BA401006D8F39 /* RNCryptorEngine.h */,
+				670E11781E8BA401006D8F39 /* RNCryptorEngine.m */,
+				670E11791E8BA401006D8F39 /* RNDecryptor.h */,
+				670E117A1E8BA401006D8F39 /* RNDecryptor.m */,
+				670E117B1E8BA401006D8F39 /* RNEncryptor.h */,
+				670E117C1E8BA401006D8F39 /* RNEncryptor.m */,
+			);
+			path = RNCryptor;
+			sourceTree = "<group>";
+		};
 		674337E11E8A5BFA00490EE9 = {
 			isa = PBXGroup;
 			children = (
 				674337EC1E8A5BFA00490EE9 /* SGRunScript */,
 				674338091E8A5C1E00490EE9 /* SGBuildHelper */,
 				674337EB1E8A5BFA00490EE9 /* Products */,
+				67590B1B47DD700ADDEB766B /* Pods */,
+				F8B491DDFAE3A80FDC8E9F8A /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -82,6 +153,7 @@
 		674337EC1E8A5BFA00490EE9 /* SGRunScript */ = {
 			isa = PBXGroup;
 			children = (
+				670E11711E8BA3EC006D8F39 /* Library */,
 				674337F01E8A5BFA00490EE9 /* AppDelegate.h */,
 				674337F11E8A5BFA00490EE9 /* AppDelegate.m */,
 				674337F31E8A5BFA00490EE9 /* ViewController.h */,
@@ -90,6 +162,7 @@
 				674337F91E8A5BFB00490EE9 /* Assets.xcassets */,
 				674337FB1E8A5BFB00490EE9 /* LaunchScreen.storyboard */,
 				674337FE1E8A5BFB00490EE9 /* Info.plist */,
+				670E11501E8B853C006D8F39 /* HERE */,
 				674337ED1E8A5BFA00490EE9 /* Supporting Files */,
 			);
 			path = SGRunScript;
@@ -107,8 +180,29 @@
 			isa = PBXGroup;
 			children = (
 				6743380A1E8A5C1E00490EE9 /* main.swift */,
+				670E11851E8BA453006D8F39 /* SGBuildHelper-Bridging-Header.h */,
 			);
 			path = SGBuildHelper;
+			sourceTree = "<group>";
+		};
+		67590B1B47DD700ADDEB766B /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				AD8EF78B60C12202093118A6 /* Pods-SGRunScript.debug.xcconfig */,
+				1DEFECB06AD9ABDACE135CCF /* Pods-SGRunScript.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		F8B491DDFAE3A80FDC8E9F8A /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				670E11831E8BA42D006D8F39 /* Security.framework */,
+				670E11811E8BA427006D8F39 /* Security.framework */,
+				5A88168D7B4ACEC7C3207C6D /* Pods_SGBuildHelper.framework */,
+				745C54FCDB673C8AFCAE4BC7 /* libPods-SGRunScript.a */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -118,10 +212,14 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 674338011E8A5BFB00490EE9 /* Build configuration list for PBXNativeTarget "SGRunScript" */;
 			buildPhases = (
+				FC106F4453DAC6D797256423 /* [CP] Check Pods Manifest.lock */,
+				6743380F1E8A5C5900490EE9 /* SGBuildHelper Build */,
 				674337E61E8A5BFA00490EE9 /* Sources */,
 				674337E71E8A5BFA00490EE9 /* Frameworks */,
 				674337E81E8A5BFA00490EE9 /* Resources */,
-				6743380F1E8A5C5900490EE9 /* SGBuildHelper */,
+				EFFD5D4BD461DA103E4133B6 /* [CP] Embed Pods Frameworks */,
+				7A28E9FDE90E5F03BE44350B /* [CP] Copy Pods Resources */,
+				670E118F1E8BAD97006D8F39 /* SGBuildHelper Plist Encrypt */,
 			);
 			buildRules = (
 			);
@@ -165,6 +263,7 @@
 					};
 					674338071E8A5C1E00490EE9 = {
 						CreatedOnToolsVersion = 8.2.1;
+						LastSwiftMigration = 0820;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -195,6 +294,8 @@
 			files = (
 				674337FD1E8A5BFB00490EE9 /* LaunchScreen.storyboard in Resources */,
 				674337FA1E8A5BFB00490EE9 /* Assets.xcassets in Resources */,
+				670E11541E8B88C6006D8F39 /* Strings.strings in Resources */,
+				670E118E1E8BA6F6006D8F39 /* PropertyList.plist in Resources */,
 				674337F81E8A5BFB00490EE9 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -202,19 +303,78 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		6743380F1E8A5C5900490EE9 /* SGBuildHelper */ = {
+		670E118F1E8BAD97006D8F39 /* SGBuildHelper Plist Encrypt */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = SGBuildHelper;
+			name = "SGBuildHelper Plist Encrypt";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "DEST=\"${BUILD_DIR}/${CONFIGURATION}\"\nxcodebuild -project \"${PROJECT_DIR}/SGrunScript.xcodeproj\" -target SGBuildHelper CONFIGURATION_BUILD_DIR=\"${DEST}\"\n\n$DEST/SGBuildHelper -i -e $DEST";
+			shellScript = "DEST=\"${BUILD_DIR}/${CONFIGURATION}\"\nRESOURCES_PATH=\"${PROJECT_DIR}/${TARGET_NAME}/HERE/\"\nRESOURCES_DESC_PATH=\"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/\"\nICON_PATH=\"${PROJECT_DIR}/${TARGET_NAME}/Assets.xcassets\"\n$DEST/SGBuildHelper -i $ICON_PATH -e $RESOURCES_PATH $RESOURCES_DESC_PATH";
+		};
+		6743380F1E8A5C5900490EE9 /* SGBuildHelper Build */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "SGBuildHelper Build";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "DEST=\"${BUILD_DIR}/${CONFIGURATION}\"\necho \"build Helper Path ${DEST}\"\nxcodebuild -project \"${PROJECT_DIR}/SGRunScript.xcodeproj\" -target SGBuildHelper CONFIGURATION_BUILD_DIR=\"${DEST}\"";
+		};
+		7A28E9FDE90E5F03BE44350B /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-SGRunScript/Pods-SGRunScript-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		EFFD5D4BD461DA103E4133B6 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-SGRunScript/Pods-SGRunScript-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		FC106F4453DAC6D797256423 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
 
@@ -223,8 +383,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				670E11801E8BA401006D8F39 /* RNEncryptor.m in Sources */,
 				674337F51E8A5BFA00490EE9 /* ViewController.m in Sources */,
+				670E117D1E8BA401006D8F39 /* RNCryptor.m in Sources */,
 				674337F21E8A5BFA00490EE9 /* AppDelegate.m in Sources */,
+				670E117E1E8BA401006D8F39 /* RNCryptorEngine.m in Sources */,
+				670E117F1E8BA401006D8F39 /* RNDecryptor.m in Sources */,
 				674337EF1E8A5BFA00490EE9 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -233,7 +397,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				670E11891E8BA480006D8F39 /* RNEncryptor.m in Sources */,
+				670E118B1E8BA484006D8F39 /* RNCryptorEngine.m in Sources */,
+				670E118A1E8BA482006D8F39 /* RNDecryptor.m in Sources */,
 				6743380B1E8A5C1E00490EE9 /* main.swift in Sources */,
+				670E118C1E8BA486006D8F39 /* RNCryptor.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -349,6 +517,7 @@
 		};
 		674338021E8A5BFB00490EE9 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = AD8EF78B60C12202093118A6 /* Pods-SGRunScript.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = "";
@@ -361,6 +530,7 @@
 		};
 		674338031E8A5BFB00490EE9 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1DEFECB06AD9ABDACE135CCF /* Pods-SGRunScript.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = "";
@@ -374,10 +544,13 @@
 		6743380D1E8A5C1E00490EE9 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "-";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 10.11;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = macosx;
+				SWIFT_OBJC_BRIDGING_HEADER = "SGBuildHelper/SGBuildHelper-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 3.0;
 			};
@@ -386,10 +559,13 @@
 		6743380E1E8A5C1E00490EE9 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "-";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 10.11;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = macosx;
+				SWIFT_OBJC_BRIDGING_HEADER = "SGBuildHelper/SGBuildHelper-Bridging-Header.h";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Release;

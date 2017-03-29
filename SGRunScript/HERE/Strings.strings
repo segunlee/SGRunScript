@@ -1,0 +1,9 @@
+/* 
+  Strings.strings
+  SGRunScript
+
+  Created by SegunLee on 2017. 3. 29..
+  Copyright © 2017년 SegunLee. All rights reserved.
+*/
+
+"HELLO"="WORLD";
