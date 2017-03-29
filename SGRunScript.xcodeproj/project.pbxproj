@@ -13,7 +13,20 @@
 		674337F81E8A5BFB00490EE9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 674337F61E8A5BFB00490EE9 /* Main.storyboard */; };
 		674337FA1E8A5BFB00490EE9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 674337F91E8A5BFB00490EE9 /* Assets.xcassets */; };
 		674337FD1E8A5BFB00490EE9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 674337FB1E8A5BFB00490EE9 /* LaunchScreen.storyboard */; };
+		6743380B1E8A5C1E00490EE9 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6743380A1E8A5C1E00490EE9 /* main.swift */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		674338061E8A5C1E00490EE9 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = /usr/share/man/man1/;
+			dstSubfolderSpec = 0;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 1;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		674337EA1E8A5BFA00490EE9 /* SGRunScript.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SGRunScript.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -26,10 +39,19 @@
 		674337F91E8A5BFB00490EE9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		674337FC1E8A5BFB00490EE9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		674337FE1E8A5BFB00490EE9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		674338081E8A5C1E00490EE9 /* SGBuildHelper */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = SGBuildHelper; sourceTree = BUILT_PRODUCTS_DIR; };
+		6743380A1E8A5C1E00490EE9 /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		674337E71E8A5BFA00490EE9 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		674338051E8A5C1E00490EE9 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -43,6 +65,7 @@
 			isa = PBXGroup;
 			children = (
 				674337EC1E8A5BFA00490EE9 /* SGRunScript */,
+				674338091E8A5C1E00490EE9 /* SGBuildHelper */,
 				674337EB1E8A5BFA00490EE9 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -51,6 +74,7 @@
 			isa = PBXGroup;
 			children = (
 				674337EA1E8A5BFA00490EE9 /* SGRunScript.app */,
+				674338081E8A5C1E00490EE9 /* SGBuildHelper */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -79,6 +103,14 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		674338091E8A5C1E00490EE9 /* SGBuildHelper */ = {
+			isa = PBXGroup;
+			children = (
+				6743380A1E8A5C1E00490EE9 /* main.swift */,
+			);
+			path = SGBuildHelper;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -89,6 +121,7 @@
 				674337E61E8A5BFA00490EE9 /* Sources */,
 				674337E71E8A5BFA00490EE9 /* Frameworks */,
 				674337E81E8A5BFA00490EE9 /* Resources */,
+				6743380F1E8A5C5900490EE9 /* SGBuildHelper */,
 			);
 			buildRules = (
 			);
@@ -99,16 +132,38 @@
 			productReference = 674337EA1E8A5BFA00490EE9 /* SGRunScript.app */;
 			productType = "com.apple.product-type.application";
 		};
+		674338071E8A5C1E00490EE9 /* SGBuildHelper */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 6743380C1E8A5C1E00490EE9 /* Build configuration list for PBXNativeTarget "SGBuildHelper" */;
+			buildPhases = (
+				674338041E8A5C1E00490EE9 /* Sources */,
+				674338051E8A5C1E00490EE9 /* Frameworks */,
+				674338061E8A5C1E00490EE9 /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = SGBuildHelper;
+			productName = SGBuildHelper;
+			productReference = 674338081E8A5C1E00490EE9 /* SGBuildHelper */;
+			productType = "com.apple.product-type.tool";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
 		674337E21E8A5BFA00490EE9 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				LastSwiftUpdateCheck = 0820;
 				LastUpgradeCheck = 0820;
 				ORGANIZATIONNAME = SegunLee;
 				TargetAttributes = {
 					674337E91E8A5BFA00490EE9 = {
+						CreatedOnToolsVersion = 8.2.1;
+						ProvisioningStyle = Manual;
+					};
+					674338071E8A5C1E00490EE9 = {
 						CreatedOnToolsVersion = 8.2.1;
 						ProvisioningStyle = Automatic;
 					};
@@ -128,6 +183,7 @@
 			projectRoot = "";
 			targets = (
 				674337E91E8A5BFA00490EE9 /* SGRunScript */,
+				674338071E8A5C1E00490EE9 /* SGBuildHelper */,
 			);
 		};
 /* End PBXProject section */
@@ -145,6 +201,23 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		6743380F1E8A5C5900490EE9 /* SGBuildHelper */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = SGBuildHelper;
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "DEST=\"${BUILD_DIR}/${CONFIGURATION}\"\nxcodebuild -project \"${PROJECT_DIR}/SGrunScript.xcodeproj\" -target SGBuildHelper CONFIGURATION_BUILD_DIR=\"${DEST}\"\n$DEST/SGBuildHelper -m M1 -sm SM1";
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		674337E61E8A5BFA00490EE9 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -153,6 +226,14 @@
 				674337F51E8A5BFA00490EE9 /* ViewController.m in Sources */,
 				674337F21E8A5BFA00490EE9 /* AppDelegate.m in Sources */,
 				674337EF1E8A5BFA00490EE9 /* main.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		674338041E8A5C1E00490EE9 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6743380B1E8A5C1E00490EE9 /* main.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -270,6 +351,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = SGRunScript/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = SGIOS.SGRunScript;
@@ -281,10 +363,34 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = SGRunScript/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = SGIOS.SGRunScript;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		6743380D1E8A5C1E00490EE9 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "-";
+				MACOSX_DEPLOYMENT_TARGET = 10.11;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Debug;
+		};
+		6743380E1E8A5C1E00490EE9 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "-";
+				MACOSX_DEPLOYMENT_TARGET = 10.11;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
 		};
@@ -307,6 +413,16 @@
 				674338031E8A5BFB00490EE9 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		6743380C1E8A5C1E00490EE9 /* Build configuration list for PBXNativeTarget "SGBuildHelper" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6743380D1E8A5C1E00490EE9 /* Debug */,
+				6743380E1E8A5C1E00490EE9 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

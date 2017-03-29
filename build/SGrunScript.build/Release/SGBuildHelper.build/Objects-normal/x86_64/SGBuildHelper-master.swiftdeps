@@ -1,0 +1,5 @@
+version: "Apple Swift version 3.0.2 (swiftlang-800.0.63 clang-800.0.42.1)"
+options: "1d9880813edc18280fa573a31271babc"
+build_time: [544066338, 540793000]
+inputs:
+  "/Users/SegunLee/Documents/GIT/RunScript/SGRunScript/SGBuildHelper/main.swift": [544066337, 0]

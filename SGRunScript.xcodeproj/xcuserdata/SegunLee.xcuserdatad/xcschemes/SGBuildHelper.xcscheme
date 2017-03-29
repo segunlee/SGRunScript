@@ -14,9 +14,9 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "674337E91E8A5BFA00490EE9"
-               BuildableName = "SGRunScript.app"
-               BlueprintName = "SGRunScript"
+               BlueprintIdentifier = "674338071E8A5C1E00490EE9"
+               BuildableName = "SGBuildHelper"
+               BlueprintName = "SGBuildHelper"
                ReferencedContainer = "container:SGRunScript.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
@@ -32,9 +32,9 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "674337E91E8A5BFA00490EE9"
-            BuildableName = "SGRunScript.app"
-            BlueprintName = "SGRunScript"
+            BlueprintIdentifier = "674338071E8A5C1E00490EE9"
+            BuildableName = "SGBuildHelper"
+            BlueprintName = "SGBuildHelper"
             ReferencedContainer = "container:SGRunScript.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
@@ -55,9 +55,9 @@
          runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "674337E91E8A5BFA00490EE9"
-            BuildableName = "SGRunScript.app"
-            BlueprintName = "SGRunScript"
+            BlueprintIdentifier = "674338071E8A5C1E00490EE9"
+            BuildableName = "SGBuildHelper"
+            BlueprintName = "SGBuildHelper"
             ReferencedContainer = "container:SGRunScript.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
@@ -74,9 +74,9 @@
          runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "674337E91E8A5BFA00490EE9"
-            BuildableName = "SGRunScript.app"
-            BlueprintName = "SGRunScript"
+            BlueprintIdentifier = "674338071E8A5C1E00490EE9"
+            BuildableName = "SGBuildHelper"
+            BlueprintName = "SGBuildHelper"
             ReferencedContainer = "container:SGRunScript.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
