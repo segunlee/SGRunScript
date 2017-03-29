@@ -8,57 +8,77 @@
 
 import Foundation
 
-class ConsoleIO {
-    class func printUsage() {
-        for (index, argument) in CommandLine.arguments.enumerated() {
-            print("\(index) + \(argument)");
-        }
-    }
-}
-
-ConsoleIO.printUsage()
-
+// MARK: -
 enum Mode: String {
-    
-    case M1Mode = "M1"
-    case M2Mode = "M2"
-    case M3Mode = "M3"
-    case UnknownMode
-    
+    case ICON
+    case ENCRYPT
+    case UNKNOWN
     init(value: String) {
         switch value {
-            case "M1":
-                self = .M1Mode
-            break
-            case "M2":
-                self = .M2Mode
-            break
-            case "M3":
-                self = .M3Mode
-            break
-            default:
-                self = .UnknownMode
-            break
+        case "i":
+            self = .ICON
+        case "e":
+            self = .ENCRYPT
+        default:
+            self = .UNKNOWN
         }
     }
 }
 
-let argCount: Int = CommandLine.arguments.count
-let commadIsFailed: Bool = argCount & 2 != 0
-
-if (commadIsFailed) {
-    print("Command is failed, please chek arguments")
-    exit(1)
-}
-
-for (index, argument) in CommandLine.arguments.enumerated() {
-    let isModeArgument = index % 2 == 0
-    if (isModeArgument) {
-        let modeString = argument.substring(from: argument.characters.index(argument.startIndex, offsetBy: 1))
-        let mode = Mode(value: modeString)
-        let valueIndex: Int = index+1
-        let value = CommandLine.arguments[1]
-        print("Command will execute... mode:\(mode) | value:\(value)")
+class Command: NSObject {
+    var mode: Mode
+    var option: String?
+    init(_ modeValue: Mode, _ optionValue: String?) {
+        mode = modeValue
+        option = optionValue
+    }
+    
+    override var description: String {
+        return "(MODE: \(mode) // OPTION: \(option))"
     }
 }
+
+
+// MARK: -
+func iconMode() {
+    print("ICON CHANGE MODE")
+}
+
+func encryptMode(_ filePath: String) {
+    print("ENcRYPT RESOURCES")
+}
+
+
+// MARK: -
+let arguments: [String] = CommandLine.arguments//["-i", "-e", "/Root/HomeDirectory/"]
+let commandIsError: Bool = arguments.count & 2 != 0
+var commands = [Command]()
+
+for (index, argument) in arguments.enumerated() {
+    let mode = Mode(value: argument.substring(from: argument.characters.index(argument.characters.startIndex, offsetBy: 1)))
+    switch mode {
+    case .ICON:
+        commands.append(Command(mode, nil))
+    case .ENCRYPT:
+        print("\(arguments.count) // index is \(index+1)")
+        guard arguments.count > index+1 else {
+            print("-e option is needed")
+            exit(1)
+        }
+        commands.append(Command(mode, arguments[index+1]))
+    default: break
+    }
+}
+
+print(commands)
+for command in commands {
+    switch command.mode {
+    case .ICON:
+        iconMode()
+    case .ENCRYPT:
+        encryptMode(command.option!)
+    default: break
+    }
+}
+
 

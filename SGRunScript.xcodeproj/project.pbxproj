@@ -214,7 +214,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "DEST=\"${BUILD_DIR}/${CONFIGURATION}\"\nxcodebuild -project \"${PROJECT_DIR}/SGrunScript.xcodeproj\" -target SGBuildHelper CONFIGURATION_BUILD_DIR=\"${DEST}\"\n$DEST/SGBuildHelper -m M1 -sm SM1";
+			shellScript = "DEST=\"${BUILD_DIR}/${CONFIGURATION}\"\nxcodebuild -project \"${PROJECT_DIR}/SGrunScript.xcodeproj\" -target SGBuildHelper CONFIGURATION_BUILD_DIR=\"${DEST}\"\n\n$DEST/SGBuildHelper -i -e $DEST";
 		};
 /* End PBXShellScriptBuildPhase section */
 
