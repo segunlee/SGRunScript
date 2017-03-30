@@ -12,19 +12,24 @@ import Cocoa
 
 // MARK: -
 enum Mode: String {
-    case ICON
     case ENCRYPT
     case UNKNOWN
+    
     init(value: String) {
         switch value {
-        case "i":
-            self = .ICON
         case "e":
             self = .ENCRYPT
         default:
             self = .UNKNOWN
         }
     }
+}
+
+struct ModeOptions: OptionSet {
+    let rawValue: Int
+    
+    static let encrypt = ModeOptions(rawValue: 1 << 0)
+    static let all: ModeOptions = [.encrypt]
 }
 
 class Command: NSObject {
@@ -50,28 +55,12 @@ class Command: NSObject {
 
 
 // MARK: -
-func iconMode(_ filePath: String) {
-    print("ICON CHANGE MODE")
-    
-    do {
-        let appIconAppiconsetPath = filePath + "/AppIcon.appiconset"
-        let imageAssetDir = try FileManager.default.contentsOfDirectory(at: URL(fileURLWithPath: appIconAppiconsetPath), includingPropertiesForKeys: nil, options: [])
-        let pngFiles = imageAssetDir.filter({ (URL) -> Bool in
-            URL.pathExtension == "png"
-        })
-        print(pngFiles)
-        // TODO:
-        
-    } catch let error as NSError {
-        print(error.localizedDescription)
-        exit(1)
-    }
-}
+
 
 func encryptMode(_ filePath: String, _ descFilePath: String) {
-    print("ENCRYPT START")
-    print("ENCRYPT filePath: \(filePath)")
-    print("ENCRYPT descFilePath: \(descFilePath)")
+    print("** ENCRYPT START **")
+    print("-> ENCRYPT filePath: \(filePath)")
+    print("-> ENCRYPT descFilePath: \(descFilePath)")
     
     do {
         let encryptKey = "HELLOWORLD"
@@ -87,6 +76,7 @@ func encryptMode(_ filePath: String, _ descFilePath: String) {
             let willEncryptData = try Data(contentsOf: URL(fileURLWithPath: path))
             let encryptData = try RNEncryptor.encryptData(willEncryptData, with: kRNCryptorAES256Settings, password: encryptKey)
             try encryptData.write(to: URL(fileURLWithPath: descPath), options: Data.WritingOptions.atomicWrite)
+            print("** ENCRYPT SUCESS -> [\(plistFile.lastPathComponent)] **")
         }
         
     } catch let error as NSError {
@@ -95,7 +85,6 @@ func encryptMode(_ filePath: String, _ descFilePath: String) {
     }
 }
 
-
 // MARK: -
 let arguments: [String] = CommandLine.arguments
 var commands = [Command]()
@@ -103,13 +92,6 @@ var commands = [Command]()
 for (index, argument) in arguments.enumerated() {
     let mode = Mode(value: argument.substring(from: argument.characters.index(argument.characters.startIndex, offsetBy: 1)))
     switch mode {
-    case .ICON:
-        print("\(arguments.count) // index is \(index+1)")
-        guard arguments.count > index+1 else {
-            print("-e option is needed")
-            exit(1)
-        }
-        commands.append(Command(mode, arguments[index+1]))
     case .ENCRYPT:
         guard arguments.count > index+2 else {
             print("-e option, option2 is needed")
@@ -123,8 +105,6 @@ for (index, argument) in arguments.enumerated() {
 print(commands)
 for command in commands {
     switch command.mode {
-    case .ICON:
-        iconMode(command.option!)
     case .ENCRYPT:
         encryptMode(command.option!, command.option2!)
     default: break
@@ -132,3 +112,30 @@ for command in commands {
 }
 
 
+
+
+
+
+
+
+//func mode(_ filePath: String) {
+//    print("ICON CHANGE MODE")
+//    
+//    do {
+//        let appIconAppiconsetPath = filePath + "/AppIcon.appiconset"
+//        let imageAssetDir = try FileManager.default.contentsOfDirectory(at: URL(fileURLWithPath: appIconAppiconsetPath), includingPropertiesForKeys: nil, options: [])
+//        let pngFiles = imageAssetDir.filter({ (URL) -> Bool in
+//            return URL.pathExtension == "png"
+//        })
+//        for png in pngFiles {
+//            let name = png.lastPathComponent
+//            print(name)
+//            //            let imageRef = NSImage(byReferencing: png)
+//            //            print(imageRef)
+//        }
+//        
+//    } catch let error as NSError {
+//        print(error.localizedDescription)
+//        exit(1)
+//    }
+//}

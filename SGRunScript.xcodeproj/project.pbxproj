@@ -26,6 +26,9 @@
 		674337FA1E8A5BFB00490EE9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 674337F91E8A5BFB00490EE9 /* Assets.xcassets */; };
 		674337FD1E8A5BFB00490EE9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 674337FB1E8A5BFB00490EE9 /* LaunchScreen.storyboard */; };
 		6743380B1E8A5C1E00490EE9 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6743380A1E8A5C1E00490EE9 /* main.swift */; };
+		67F6458C1E8CC672006AF013 /* A.plist in Resources */ = {isa = PBXBuildFile; fileRef = 67F6458B1E8CC672006AF013 /* A.plist */; };
+		67F6458E1E8CC67A006AF013 /* B.plist in Resources */ = {isa = PBXBuildFile; fileRef = 67F6458D1E8CC67A006AF013 /* B.plist */; };
+		67F645901E8CC68A006AF013 /* C.plist in Resources */ = {isa = PBXBuildFile; fileRef = 67F6458F1E8CC68A006AF013 /* C.plist */; };
 		B66E4E788005280CF9631D77 /* libPods-SGRunScript.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 745C54FCDB673C8AFCAE4BC7 /* libPods-SGRunScript.a */; };
 /* End PBXBuildFile section */
 
@@ -71,6 +74,9 @@
 		674337FE1E8A5BFB00490EE9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		674338081E8A5C1E00490EE9 /* SGBuildHelper */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = SGBuildHelper; sourceTree = BUILT_PRODUCTS_DIR; };
 		6743380A1E8A5C1E00490EE9 /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
+		67F6458B1E8CC672006AF013 /* A.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = A.plist; sourceTree = "<group>"; };
+		67F6458D1E8CC67A006AF013 /* B.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = B.plist; sourceTree = "<group>"; };
+		67F6458F1E8CC68A006AF013 /* C.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = C.plist; sourceTree = "<group>"; };
 		745C54FCDB673C8AFCAE4BC7 /* libPods-SGRunScript.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-SGRunScript.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		AD8EF78B60C12202093118A6 /* Pods-SGRunScript.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SGRunScript.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SGRunScript/Pods-SGRunScript.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -101,6 +107,9 @@
 			children = (
 				670E11531E8B88C6006D8F39 /* Strings.strings */,
 				670E118D1E8BA6F6006D8F39 /* PropertyList.plist */,
+				67F6458B1E8CC672006AF013 /* A.plist */,
+				67F6458D1E8CC67A006AF013 /* B.plist */,
+				67F6458F1E8CC68A006AF013 /* C.plist */,
 			);
 			path = HERE;
 			sourceTree = "<group>";
@@ -212,8 +221,8 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 674338011E8A5BFB00490EE9 /* Build configuration list for PBXNativeTarget "SGRunScript" */;
 			buildPhases = (
-				FC106F4453DAC6D797256423 /* [CP] Check Pods Manifest.lock */,
 				6743380F1E8A5C5900490EE9 /* SGBuildHelper Build */,
+				FC106F4453DAC6D797256423 /* [CP] Check Pods Manifest.lock */,
 				674337E61E8A5BFA00490EE9 /* Sources */,
 				674337E71E8A5BFA00490EE9 /* Frameworks */,
 				674337E81E8A5BFA00490EE9 /* Resources */,
@@ -292,8 +301,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				67F6458C1E8CC672006AF013 /* A.plist in Resources */,
 				674337FD1E8A5BFB00490EE9 /* LaunchScreen.storyboard in Resources */,
+				67F6458E1E8CC67A006AF013 /* B.plist in Resources */,
 				674337FA1E8A5BFB00490EE9 /* Assets.xcassets in Resources */,
+				67F645901E8CC68A006AF013 /* C.plist in Resources */,
 				670E11541E8B88C6006D8F39 /* Strings.strings in Resources */,
 				670E118E1E8BA6F6006D8F39 /* PropertyList.plist in Resources */,
 				674337F81E8A5BFB00490EE9 /* Main.storyboard in Resources */,
@@ -315,7 +327,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "DEST=\"${BUILD_DIR}/${CONFIGURATION}\"\nRESOURCES_PATH=\"${PROJECT_DIR}/${TARGET_NAME}/HERE/\"\nRESOURCES_DESC_PATH=\"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/\"\nICON_PATH=\"${PROJECT_DIR}/${TARGET_NAME}/Assets.xcassets\"\n$DEST/SGBuildHelper -i $ICON_PATH -e $RESOURCES_PATH $RESOURCES_DESC_PATH";
+			shellScript = "DEST=\"${BUILD_DIR}/${CONFIGURATION}\"\nRESOURCES_PATH=\"${PROJECT_DIR}/${TARGET_NAME}/HERE/\"\nRESOURCES_DESC_PATH=\"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/\"\n$DEST/SGBuildHelper -e $RESOURCES_PATH $RESOURCES_DESC_PATH";
 		};
 		6743380F1E8A5C5900490EE9 /* SGBuildHelper Build */ = {
 			isa = PBXShellScriptBuildPhase;
@@ -329,7 +341,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "DEST=\"${BUILD_DIR}/${CONFIGURATION}\"\necho \"build Helper Path ${DEST}\"\nxcodebuild -project \"${PROJECT_DIR}/SGRunScript.xcodeproj\" -target SGBuildHelper CONFIGURATION_BUILD_DIR=\"${DEST}\"";
+			shellScript = "DEST=\"${BUILD_DIR}/${CONFIGURATION}\"\nxcodebuild -project \"${PROJECT_DIR}/SGRunScript.xcodeproj\" -target SGBuildHelper CONFIGURATION_BUILD_DIR=\"${DEST}\"";
 		};
 		7A28E9FDE90E5F03BE44350B /* [CP] Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;

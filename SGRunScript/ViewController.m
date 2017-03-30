@@ -10,7 +10,6 @@
 #import "RNDecryptor.h"
 
 @interface ViewController ()
-@property (nonatomic, strong) NSDictionary *plist;
 @end
 
 @implementation ViewController
@@ -21,20 +20,26 @@
 }
 
 - (void)loadPlist {
-    NSData *encryptData = [[NSData alloc] initWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"PropertyList" ofType:@"plist"]];
-    NSString *encryptKey = @"HELLOWORLD";
-    NSError *error;
-    NSData *plistData = [RNDecryptor decryptData:encryptData withPassword:encryptKey error:&error];
-    if (plistData) {
-        NSPropertyListFormat propertyListFormat;
-        NSDictionary *plist = [NSPropertyListSerialization propertyListWithData:plistData options:NSPropertyListImmutable format:&propertyListFormat error:&error];
-        if(!plist){
-            NSLog(@"%@", error.localizedDescription);
+    
+    NSArray *plists = @[@"PropertyList", @"A", @"B", @"C"];
+    for (NSString *name in plists) {
+        NSData *encryptData = [[NSData alloc] initWithContentsOfFile:[[NSBundle mainBundle] pathForResource:name ofType:@"plist"]];
+        NSString *encryptKey = @"HELLOWORLD";
+        NSError *error;
+        NSData *plistData = [RNDecryptor decryptData:encryptData withPassword:encryptKey error:&error];
+        if (plistData) {
+            NSPropertyListFormat propertyListFormat;
+            NSDictionary *plist = [NSPropertyListSerialization propertyListWithData:plistData options:NSPropertyListImmutable format:&propertyListFormat error:&error];
+            if(!plist){
+                NSLog(@"%@", error.localizedDescription);
+            } else {
+                NSLog(@"File: %@\n%@", name, plist);
+            }
+            
+        } else {
+            NSLog(@"plist load error");
         }
-        _plist = plist;
-        NSLog(@"%@", _plist);
-    } else {
-        NSLog(@"plist load error");
+
     }
 }
 
