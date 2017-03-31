@@ -49,21 +49,20 @@ class Command: NSObject {
     }
     
     override var description: String {
-        return "(MODE: \(mode) // OPTION: \(option) // OPTION2: \(option2))"
+        return "** (MODE: \(mode) // OPTION: \(option) // OPTION2: \(option2))"
     }
 }
 
 
 // MARK: -
-
-
 func encryptMode(_ filePath: String, _ descFilePath: String) {
     print("** ENCRYPT START **")
     print("-> ENCRYPT filePath: \(filePath)")
     print("-> ENCRYPT descFilePath: \(descFilePath)")
     
+    let encryptKey = "HELLOWORLD"
+    
     do {
-        let encryptKey = "HELLOWORLD"
         let encryptFileTypes = ["plist"]
         let resourceDir = try FileManager.default.contentsOfDirectory(at: URL(fileURLWithPath: filePath), includingPropertiesForKeys: nil, options: [])
         let plistFiles = resourceDir.filter({ (URL) -> Bool in
@@ -76,7 +75,7 @@ func encryptMode(_ filePath: String, _ descFilePath: String) {
             let willEncryptData = try Data(contentsOf: URL(fileURLWithPath: path))
             let encryptData = try RNEncryptor.encryptData(willEncryptData, with: kRNCryptorAES256Settings, password: encryptKey)
             try encryptData.write(to: URL(fileURLWithPath: descPath), options: Data.WritingOptions.atomicWrite)
-            print("** ENCRYPT SUCESS -> [\(plistFile.lastPathComponent)] **")
+            print("** ENCRYPTED SUCCESS -> [\(plistFile.lastPathComponent)] **")
         }
         
     } catch let error as NSError {
@@ -84,6 +83,7 @@ func encryptMode(_ filePath: String, _ descFilePath: String) {
         exit(1)
     }
 }
+
 
 // MARK: -
 let arguments: [String] = CommandLine.arguments
@@ -103,6 +103,7 @@ for (index, argument) in arguments.enumerated() {
 }
 
 print(commands)
+
 for command in commands {
     switch command.mode {
     case .ENCRYPT:
@@ -110,12 +111,6 @@ for command in commands {
     default: break
     }
 }
-
-
-
-
-
-
 
 
 //func mode(_ filePath: String) {
